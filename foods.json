@@ -1,0 +1,28 @@
+{
+    "_comment":"TODO: an template example for foods please update",
+    "id": "id",
+    "img": "img",
+    "name": "string",
+    "base-price": "money",
+    "selection-header": {
+        "selection-id": "id",
+        "selection-description" : "string",
+        "must-choose": "bool",
+        "radio-or-checkbox": "bool",
+        "selection-count-limit": "int",
+        "selections": {
+            "selection-1": {
+                "id": "id",
+                "name": "string",
+                "selected": "bool",
+                "price": "money"
+            },
+            "selection-2": {
+                "id": "id",
+                "name": "string",
+                "selected": "bool",
+                "price": "money"
+            }
+        }
+    }
+}

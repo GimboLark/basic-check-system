@@ -1,0 +1,46 @@
+// to view diagram go to https://dbdiagram.io/d and paste the code
+// this is a pseudodiagram like a psuedocode its just for visualise the idea
+// for more info about language check https://dbml.dbdiagram.io/home
+
+
+Table food {
+  id id
+  name string
+  price money
+  prepare_time time
+}
+
+Table request {
+  id id
+  food food
+  amount u8
+  price u8
+  status status
+  waiter emloyee
+}
+
+Table employee {
+  id id
+  name string
+  job job
+}
+
+Table tables {
+  id id
+  user user
+  name string
+  checkout money
+  requests request[]
+  waiters employee[]
+}
+
+Table active_users {
+  user uuid
+}
+
+
+Ref: employee.id - request.waiter
+Ref: food.id - request.food
+Ref: request.id < tables.requests
+Ref: active_users.user - tables.user
+Ref: employee.id < tables.waiters
