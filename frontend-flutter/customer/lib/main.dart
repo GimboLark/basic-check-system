@@ -36,7 +36,13 @@ class _MainPageState extends State<MainPage> {
       child: Column(
         children: [
           Row(
-            children: [butonParcalari("1"), butonParcalari("2")],
+            children: [
+              butonParcalari("1"),
+              SizedBox(
+                width: 10,
+              ),
+              butonParcalari("2")
+            ],
           )
         ],
       ),
@@ -46,12 +52,12 @@ class _MainPageState extends State<MainPage> {
   Expanded butonParcalari(String number) {
     return Expanded(
         child: TextButton(
-          onPressed: () {
-            Placeholder;
-          },
-          child: Text("masa $number"),
-          style:
+      onPressed: () {
+        Placeholder;
+      },
+      child: Text("masa $number"),
+      style:
           ButtonStyle(backgroundColor: MaterialStatePropertyAll(Colors.yellow)),
-        ));
+    ));
   }
 }
