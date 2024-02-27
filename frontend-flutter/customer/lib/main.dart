@@ -35,6 +35,7 @@ class _MainPageState extends State<MainPage> {
     return Center(
       child: Column(
         children: [
+          SizedBox(height: 10,),
           Row(
             children: [
               butonParcalari("1"),
@@ -42,6 +43,14 @@ class _MainPageState extends State<MainPage> {
                 width: 10,
               ),
               butonParcalari("2")
+            ],
+          ),
+          SizedBox(height: 10,),
+          Row(
+            children: [
+              butonParcalari("3"),
+              SizedBox(width: 10,),
+              butonParcalari("4")
             ],
           )
         ],
