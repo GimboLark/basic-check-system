@@ -46,12 +46,12 @@ class _MainPageState extends State<MainPage> {
   Expanded butonParcalari(String number) {
     return Expanded(
         child: TextButton(
-      onPressed: () {
-        Placeholder;
-      },
-      child: Text("masa $number"),
-      style:
+          onPressed: () {
+            Placeholder;
+          },
+          child: Text("masa $number"),
+          style:
           ButtonStyle(backgroundColor: MaterialStatePropertyAll(Colors.yellow)),
-    ));
+        ));
   }
 }
