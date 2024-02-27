@@ -1,1 +1,4 @@
 server-rs/target
+frontend-flutter/customer/ios
+frontend-flutter/customer/android
+frontend-flutter/customer/macos
