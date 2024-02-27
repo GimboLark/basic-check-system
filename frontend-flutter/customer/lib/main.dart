@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: Text("Customer Page"),
+          backgroundColor: Colors.blue,
           centerTitle: true,
         ),
         body: MainPage(),
@@ -34,10 +35,23 @@ class _MainPageState extends State<MainPage> {
     return Center(
       child: Column(
         children: [
-          Text("Center text")
+          Row(
+            children: [butonParcalari("1"), butonParcalari("2")],
+          )
         ],
       ),
     );
   }
-}
 
+  Expanded butonParcalari(String number) {
+    return Expanded(
+        child: TextButton(
+      onPressed: () {
+        Placeholder;
+      },
+      child: Text("masa $number"),
+      style:
+          ButtonStyle(backgroundColor: MaterialStatePropertyAll(Colors.yellow)),
+    ));
+  }
+}
