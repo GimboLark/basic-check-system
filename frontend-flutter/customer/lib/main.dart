@@ -57,11 +57,14 @@ class _MainPageState extends State<MainPage> {
 
   Expanded butonParcalari(int number) {
     Widget secilecekSayfa = const MainPage();
+    String yemekIsmi = "Default";
     switch (number) {
       case 1:
+        yemekIsmi = "Tatlılar";
         secilecekSayfa = const TatliSayfasi();
         break;
       case 2:
+        yemekIsmi = "Ana Yemekler";
         secilecekSayfa = const AnaYemekSayfasi();
     }
     return Expanded(
@@ -72,7 +75,7 @@ class _MainPageState extends State<MainPage> {
       },
       style: const ButtonStyle(
           backgroundColor: MaterialStatePropertyAll(Colors.yellow)),
-      child: Text("masa $number"),
+      child: Text(yemekIsmi),
     ));
   }
 }
