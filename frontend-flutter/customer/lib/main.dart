@@ -12,11 +12,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Customer Page"),
+          title: const Text("Customer Page"),
           backgroundColor: Colors.blue,
           centerTitle: true,
         ),
-        body: MainPage(),
+        body: const MainPage(),
       ),
     );
   }
@@ -35,38 +35,98 @@ class _MainPageState extends State<MainPage> {
     return Center(
       child: Column(
         children: [
-          SizedBox(height: 10,),
+          const SizedBox(
+            height: 10,
+          ),
           Row(
             children: [
-              butonParcalari("1"),
-              SizedBox(
+              butonParcalari(1),
+              const SizedBox(
                 width: 10,
               ),
-              butonParcalari("2")
+              butonParcalari(2)
             ],
           ),
-          SizedBox(height: 10,),
-          Row(
-            children: [
-              butonParcalari("3"),
-              SizedBox(width: 10,),
-              butonParcalari("4")
-            ],
-          )
+          const SizedBox(
+            height: 10,
+          ),
         ],
       ),
     );
   }
 
-  Expanded butonParcalari(String number) {
+  Expanded butonParcalari(int number) {
+    Widget secilecekSayfa = const MainPage();
+    switch (number) {
+      case 1:
+        secilecekSayfa = const TatliSayfasi();
+        break;
+      case 2:
+        secilecekSayfa = const AnaYemekSayfasi();
+    }
     return Expanded(
         child: TextButton(
       onPressed: () {
-        Placeholder;
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => secilecekSayfa));
       },
+      style: const ButtonStyle(
+          backgroundColor: MaterialStatePropertyAll(Colors.yellow)),
       child: Text("masa $number"),
-      style:
-          ButtonStyle(backgroundColor: MaterialStatePropertyAll(Colors.yellow)),
     ));
+  }
+}
+
+class TatliSayfasi extends StatefulWidget {
+  const TatliSayfasi({super.key});
+
+  @override
+  State<TatliSayfasi> createState() => _TatliSayfasiState();
+}
+
+class _TatliSayfasiState extends State<TatliSayfasi> {
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Column(children: [
+        const Row(
+          children: [
+            Text("tatli 1"),
+          ],
+        ),
+        ElevatedButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            child: const Text("Geri dön"))
+      ]),
+    );
+  }
+}
+
+class AnaYemekSayfasi extends StatefulWidget {
+  const AnaYemekSayfasi({super.key});
+
+  @override
+  State<AnaYemekSayfasi> createState() => _AnaYemekSayfasiState();
+}
+
+class _AnaYemekSayfasiState extends State<AnaYemekSayfasi> {
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Column(children: [
+        const Row(
+          children: [
+            Text("Ana Yemek 1"),
+          ],
+        ),
+        ElevatedButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            child: const Text("Geri dön"))
+      ]),
+    );
   }
 }
