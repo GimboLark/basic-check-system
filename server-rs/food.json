@@ -1,0 +1,34 @@
+{
+  "id": "food_001",
+  "img": "example.com/image.jpg",
+  "name": "Pizza",
+  "description": "Delicious pizza with various toppings",
+  "base_price": 8.0,
+  "selections": {
+    "id": "sel_group_001",
+    "description": "Choose your size",
+    "must_choose": true,
+    "radio_or_checkbox": true,
+    "selection_count_limit": 1,
+    "selections": [
+      {
+        "id": "sel_001",
+        "name": "Size",
+        "selected": false,
+        "price": 10.0
+      },
+      {
+        "id": "sel_002",
+        "name": "Medium",
+        "selected": true,
+        "price": 12.0
+      },
+      {
+        "id": "sel_003",
+        "name": "Large",
+        "selected": false,
+        "price": 15.0
+      }
+    ]
+  }
+}
