@@ -8,9 +8,9 @@ class Food{
   late String name;
   late String description;
   late double basePrice;
-  late Selections? selections;
+  late Selections selections;
 
-  Food.Require({required this.basePrice, this.selections});
+  Food.Require({required this.basePrice});
 
   Food.withId(this.id,this.img,this.name,this.description,this.basePrice,this.selections);
   Food(this.img,this.name,this.description,this.basePrice,this.selections);

@@ -12,4 +12,6 @@ class Selections{
   Selections.withId(this.id,this.description,this.mustChoose,this.radioOrChechbox,this.selectionCountLimit,this.selections);
 
   Selections(this.description,this.mustChoose,this.radioOrChechbox,this.selectionCountLimit,this.selections);
+
+  where(Function(dynamic selection) param0) {}
 }

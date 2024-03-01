@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'Screens/anaYemekSayfası.dart';
+import 'Screens/tatliSayfası.dart';
 
 void main() {
   runApp(const MyApp());
@@ -80,56 +82,6 @@ class _MainPageState extends State<MainPage> {
   }
 }
 
-class TatliSayfasi extends StatefulWidget {
-  const TatliSayfasi({super.key});
 
-  @override
-  State<TatliSayfasi> createState() => _TatliSayfasiState();
-}
 
-class _TatliSayfasiState extends State<TatliSayfasi> {
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Column(children: [
-        const Row(
-          children: [
-            Text("tatli 1"),
-          ],
-        ),
-        ElevatedButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            child: const Text("Geri dön"))
-      ]),
-    );
-  }
-}
 
-class AnaYemekSayfasi extends StatefulWidget {
-  const AnaYemekSayfasi({super.key});
-
-  @override
-  State<AnaYemekSayfasi> createState() => _AnaYemekSayfasiState();
-}
-
-class _AnaYemekSayfasiState extends State<AnaYemekSayfasi> {
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Column(children: [
-        const Row(
-          children: [
-            Text("Ana Yemek 1"),
-          ],
-        ),
-        ElevatedButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            child: const Text("Geri dön"))
-      ]),
-    );
-  }
-}
