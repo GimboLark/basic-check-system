@@ -1,5 +1,7 @@
+import 'package:customer/Screens/anaYemekSayfas%C4%B1.dart';
 import 'package:flutter/material.dart';
-import 'Screens/anaYemekSayfası.dart';
+import 'Screens/aperatifSayfasi.dart';
+import 'Screens/icecekSayfası.dart';
 import 'Screens/tatliSayfası.dart';
 
 void main() {
@@ -14,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text("Customer Page"),
+          title: const Text("Cerciler Restourant"),
           backgroundColor: Colors.blue,
           centerTitle: true,
         ),
@@ -68,6 +70,15 @@ class _MainPageState extends State<MainPage> {
       case 2:
         yemekIsmi = "Ana Yemekler";
         secilecekSayfa = const AnaYemekSayfasi();
+        break;
+      case 3:
+        yemekIsmi = "Aperatifler";
+        secilecekSayfa = const AperatifSayfasi();
+        break;
+      case 4:
+        yemekIsmi = "İçecekler";
+        secilecekSayfa = const IcecekSayfasi();
+        break;
     }
     return Expanded(
         child: TextButton(
