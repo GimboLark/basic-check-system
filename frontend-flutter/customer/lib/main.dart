@@ -1,5 +1,6 @@
 import 'package:customer/Screens/anaYemekSayfas%C4%B1.dart';
 import 'package:flutter/material.dart';
+
 import 'Screens/aperatifSayfasi.dart';
 import 'Screens/icecekSayfası.dart';
 import 'Screens/tatliSayfası.dart';
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text("Cerciler Restourant"),
+          title: const Text("Cerciler Restaurant"),
           backgroundColor: Colors.blue,
           centerTitle: true,
         ),
@@ -92,7 +93,3 @@ class _MainPageState extends State<MainPage> {
     ));
   }
 }
-
-
-
-
